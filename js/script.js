@@ -30,29 +30,46 @@
 // 2. Dare la possibilità di inserire due parole. 
 //        Verificare tramite una funzione che le due parole abbiano la stessa lunghezza.    Se hanno la stessa lunghezza, stamparle entrambe altrimenti stampare la più lunga delle due.
 
-var x = prompt('inserisci prima parola');
-var y = prompt('inserisci seconda parola');
+// var x = prompt('inserisci prima parola');
+// var y = prompt('inserisci seconda parola');
 
-var pLunga = parolaLunga(x,y);
-console.log(pLunga);
+// var pLunga = parolaLunga(x,y);
+// console.log(pLunga);
+
+// // funzione
+
+// function parolaLunga(a,b){
+//     if(a.length>b.length){
+//         return a;
+//     } else if (a.length<b.length){
+//         return b;
+//     } else {
+//         return a + ' ' + b;
+//     }
+// }
+
+//========================================================================================
+// 3.  Scrivi una funzione che fonda due array (con lo stesso numero di elementi) prendendo alternativamente gli elementi da uno e dall’altro es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+
+var array1 = ['a','b','c'];
+var array2 = [1,2,3];
+var arrayUnito = arraySomma(array1, array2);
+
+console.log(arrayUnito);
 
 // funzione
 
-function parolaLunga(a,b){
-    if(a.length>b.length){
-        return a;
-    } else if (a.length<b.length){
-        return b;
+function arraySomma(arrayA,arrayB){
+    var arraySum = [];
+    if(arrayA.length == arrayB.length){
+        for(var i=0; i<arrayA.length; i++){
+            arraySum.push(arrayA[i], arrayB[i]);
+        }    
+        return arraySum;
     } else {
-        return a + ' ' + b;
+        alert('La lunghezza dei due array deve essere uguale');
     }
 }
-
-//========================================================================================
-// 3.  Scrivi una funzione che fonda due array (con lo stesso numero di elementi) prendendo alternativamente gli elementi da uno e dall’altroes. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
-
-
-
 
 //========================================================================================
 // 4. Scrivi una funzione che prenda una stringa e la trasformi con l'iniziale maiuscola e tutto il resto in minuscolo.
