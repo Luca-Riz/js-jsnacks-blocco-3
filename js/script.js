@@ -51,25 +51,39 @@
 //========================================================================================
 // 3.  Scrivi una funzione che fonda due array (con lo stesso numero di elementi) prendendo alternativamente gli elementi da uno e dall’altro es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
 
-var array1 = ['a','b','c'];
-var array2 = [1,2,3];
-var arrayUnito = arraySomma(array1, array2);
+// var array1 = ['a','b','c'];
+// var array2 = [1,2,3];
+// var arrayUnito = arraySomma(array1, array2);
 
-console.log(arrayUnito);
+// console.log(arrayUnito);
 
-// funzione
+// // funzione
 
-function arraySomma(arrayA,arrayB){
-    var arraySum = [];
-    if(arrayA.length == arrayB.length){
-        for(var i=0; i<arrayA.length; i++){
-            arraySum.push(arrayA[i], arrayB[i]);
-        }    
-        return arraySum;
-    } else {
-        alert('La lunghezza dei due array deve essere uguale');
-    }
-}
+// function arraySomma(arrayA,arrayB){
+//     var arraySum = [];
+//     if(arrayA.length == arrayB.length){
+//         for(var i=0; i<arrayA.length; i++){
+//             arraySum.push(arrayA[i], arrayB[i]);
+//         }    
+//         return arraySum;
+//     } else {
+//         alert('La lunghezza dei due array deve essere uguale');
+//     }
+// }
 
 //========================================================================================
 // 4. Scrivi una funzione che prenda una stringa e la trasformi con l'iniziale maiuscola e tutto il resto in minuscolo.
+
+var parolaCap = capitalize(prompt('inserisci parola da capitalizzare'));
+console.log(parolaCap);
+
+//funzione
+
+function capitalize(str){
+    var str;    
+    var prima = str[0].toUpperCase();
+    // console.log(prima);
+    var resto = str.slice(1).toLowerCase();
+    // console.log(resto);
+    return prima+resto;
+}
